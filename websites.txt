@@ -1,0 +1,6 @@
+www.python.org
+regarding python duck typing
+www.voidspace.org/uk/python/articles/duck_typing.shtml
+guide to python namespaces
+www.bytebaker.com/2008/07/30/python-namespaces/
+

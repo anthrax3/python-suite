@@ -1,0 +1,113 @@
+functions
+
+function components
+calling functions
+return values
+
+what is a function?
+
+block of code that performs a specific action and returns a result
+
+Advantages:
+    Reusable code
+    Easier to maintain
+    Increase readability
+    Hide complexity from user
+
+function syntax from caller perspective
+
+
+
+name = my_function(arg1, arg2, arg='Default')
+
+in above example name is optional but suggested
+my_func is function call
+arg1 and arg2 are positional
+arg is keyword/default
+
+parameter -> designtime placeholder
+argument -> runtime data object
+
+### my interpretation ###
+dynamic typing means that once data is passed into a placeholder parameter
+eg 1 into arg1 it becomes an integer and thus an argument
+#########################
+
+Another advantage of using keyword arguments such as arg='Default' (besides 
+specifying default values) is that with keywords you can pass arguments
+in any order
+
+In addition, our function needs to contain a return value (more on this later)
+
+Built-in Functions
+
+__builtin__ (p2) (p3k)
+(try dir + help)
+
+double underscore functions are internal to python
+
+mylist.__len__() is the same as mylist.len()
+this is known as syntactic sugar
+mylist.len() is actually a method
+
+The reason why Python 'magic' methods and attributes use the 
+__name__ notation is to avoid collisions with user defined names
+
+In idle you can run
+import builtins
+dir(builtins)
+
+This formally imports the builtins module 
+and runs the builtin function dir which 
+returns a list of builtin functions on 
+the builtins module
+
+Then you could run 
+help(builtins)
+or use the dot notation
+help(builtins.len)
+
+The python 'dot' notation also gives you access to attributes 
+(properties) that are associated with a given name
+
+You could also run 
+builtins.__doc__
+
+If you run 
+a = 'Python'
+Which is a string, then when you type 
+a. 
+idle will give you a list of methods that go with strings
+or
+l = ['one', 2]
+l.
+idle will give you a list of methods that go with lists
+
+This is known as duck typing.
+
+functions vs. methods
+
+function is stand-alone code block, called independantly
+
+method is a function that is bound to an object
+
+namespace + modules
+
+mylist = mylist.append('New element')
+
+import random
+ri = random.randint(1,100)
+
+Creating functions
+
+def power(p):
+    '''
+    Calculates 2 to the power of p
+    '''
+    r = 2 ** p
+    return r
+print ('2 to the power of 2 is', power(2))
+
+dynamically typed parameter
+docstring (pep 257) ; Sphinx
+return value (optional)
